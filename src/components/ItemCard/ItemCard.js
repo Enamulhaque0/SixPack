@@ -2,6 +2,15 @@ import React from "react";
 
 const ItemCard = ({ item,setExercise, exercise }) => {
   const { name, picture, age, time } = item;
+
+  const addToList =()=>{
+  const info ={
+    time
+
+  }
+  setExercise([info])
+
+  }
   return (
     <div className="m-8">
       <div className="card w-60 bg-base-100 drop-shadow-lg">
@@ -16,7 +25,7 @@ const ItemCard = ({ item,setExercise, exercise }) => {
           <h2 className="card-title mx-auto">{name}</h2>
           <p className="ms-0">For Age : {age}</p>
          <p>Time required : {time}s</p>
-          <button className="btn glass btn-primary">Add to list</button>
+          <button onClick={addToList} className="btn glass btn-primary">Add to list</button>
          
         </div>
       </div>
