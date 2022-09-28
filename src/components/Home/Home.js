@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Items from "../Items/Items";
+import Swal from 'sweetalert2'
 
 const Home = () => {
  const [exercise,setExercise] =useState([])
@@ -8,7 +9,13 @@ const sum = exercise.reduce((accumulator, object) => {
   return accumulator + object.time;
 }, 0);
 
-console.log(sum); 
+const tost=()=>{
+  Swal.fire(
+    'Good job!',
+    'Activity Completed!',
+    'success'
+  )
+}
 
 // console.log(exercise);
   return (
@@ -54,7 +61,7 @@ console.log(sum);
                     Break time : 15 seconds
                   </h1>
                   <div className="card-actions">
-                    <button className="btn btn-wide mt-7">Wide</button>
+                    <button onClick={tost} className="btn btn-wide mt-7" >Activity Completed</button>
                   </div>
                 </div>
               </div>
