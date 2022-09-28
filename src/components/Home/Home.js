@@ -2,8 +2,15 @@ import { useState } from "react";
 import Items from "../Items/Items";
 
 const Home = () => {
- const [exercise,setExercise] =useState(0)
-console.log(exercise);
+ const [exercise,setExercise] =useState([])
+ 
+const sum = exercise.reduce((accumulator, object) => {
+  return accumulator + object.time;
+}, 0);
+
+console.log(sum); 
+
+// console.log(exercise);
   return (
     <div className="mt-6">
       <div className="flex  ms-12">
@@ -41,7 +48,7 @@ console.log(exercise);
                   </div>
                   <h1 className="mt-8 text-1xl">Exercise Details</h1>
                   <h1 className="mt-7 bg-slate-600 p-3 text-white">
-                    Exercise time: {exercise.time} seconds
+                    Exercise time: {sum} seconds
                   </h1>
                   <h1 className="mt-7 bg-slate-600 p-3 text-white">
                     Break time : 15 seconds

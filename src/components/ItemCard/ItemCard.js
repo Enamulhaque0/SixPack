@@ -8,7 +8,10 @@ const ItemCard = ({ item,setExercise, exercise }) => {
     time
 
   }
-  setExercise([info])
+  if(exercise){
+    const newTime =[...exercise, info]
+    setExercise(newTime)
+  }
 
   }
   return (
