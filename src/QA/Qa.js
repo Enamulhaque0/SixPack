@@ -2,9 +2,9 @@ import React from "react";
 
 const Qa = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-24 mt-12 ">
-      <div className="">
-        How does React Work
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 mx-24 mt-12 ">
+      <div className="mx-auto">
+        React Work
         <div className="dropdown dropdown-end ">
           <label
             tabIndex={0}
@@ -29,7 +29,7 @@ const Qa = () => {
             className="card compact dropdown-content shadow bg-base-100 rounded-box w-64"
           >
             <div className="card-body">
-              <h2 className="card-title ">You needed more info?</h2>
+              <h2 className="card-title "></h2>
               <p>
                 A React app usually has a single root DOM node. Rendering an
                 element into the DOM will change the user interface of the page.
@@ -39,7 +39,7 @@ const Qa = () => {
         </div>
       </div>
       <div>
-        difference between state and props?
+         state and props?
         <div className="dropdown dropdown-end">
           <label
             tabIndex={0}
@@ -61,10 +61,10 @@ const Qa = () => {
           </label>
           <div
             tabIndex={0}
-            className="card compact dropdown-content shadow bg-base-100 rounded-box w-64"
+            className="card compact dropdown-content shadow bg-base-100 rounded-box w-60"
           >
             <div className="card-body">
-              <h2 className="card-title ">You needed more info?</h2>
+              <h2 className="card-title "></h2>
               <p >
                 Props are used to pass data from one component <br /> to another. The
                 state is a local data storage that is local <br /> to the component
@@ -75,7 +75,7 @@ const Qa = () => {
         </div>
       </div>
       <div>
-      What is React useEffect used for?
+      useEffect used for?
         <div className="dropdown dropdown-end">
           <label
             tabIndex={0}

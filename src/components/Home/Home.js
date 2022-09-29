@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Items from "../Items/Items";
 import Swal from "sweetalert2";
+import { Icon } from '@iconify/react';
 
 const Home = () => {
   const [exercise, setExercise] = useState([]);
@@ -28,6 +29,7 @@ const Home = () => {
 
   const tost = () => {
     Swal.fire("Good job!", "Activity Completed!", "success");
+   
   };
 
   // console.log(exercise);
@@ -49,15 +51,15 @@ const Home = () => {
                     <img src="https://placeimg.com/192/192/people" />
                   </div>
                   <div>
-                    <h1>Enamul haque</h1>
-                    <p>Dhaka , Bangladesh</p>
+                    <h1>Mohammad Enamul haque</h1>
+                    <p className="flex items-center gap-2 "> <Icon icon="ci:location" />  Dhaka , Bangladesh</p>
                   </div>
                 </div>
                 <div className="card-body items-center text-center">
-                  <div className="flex justify-around  bg-info rounded-lg text-white">
-                    <h1 className=" p-3 mx-2">64KG</h1>
-                    <h1 className=" p-3">5.8"</h1>
-                    <h1 className=" p-3">25yrs</h1>
+                  <div className="flex justify-around  bg-info rounded-lg text-white ">
+                    <h1 className=" px-7 py-3 mx-2">66KG</h1>
+                    <h1 className=" px-7 py-3">5.8"</h1>
+                    <h1 className=" px-7 py-3">23yrs</h1>
                   </div>
                   <h1 className="text-1xl">Add A Break</h1>
                   <div className="flex justify-around gap-3 ">
@@ -91,10 +93,10 @@ const Home = () => {
                     </button>
                   </div>
                   <h1 className="mt-8 text-1xl">Exercise Details</h1>
-                  <h1 className="mt-7 bg-slate-600 p-3 text-white">
+                  <h1 className="mt-4 bg-slate-600 p-3 rounded text-white">
                     Exercise time: {sum} seconds
                   </h1>
-                  <h1 className="mt-7 bg-slate-600 p-3 text-white">
+                  <h1 className="mt-1 rounded bg-slate-600 p-3 text-white">
                     Break time : {breakTime} seconds
                   </h1>
                   <div className="card-actions">
