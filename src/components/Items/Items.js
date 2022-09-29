@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard";
 
 const Items = ({ setExercise, exercise }) => {
-  console.log(exercise);
+  
   const [items, setItems] = useState([]);
 
   useEffect(() => {
