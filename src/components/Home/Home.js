@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Items from "../Items/Items";
 import Swal from "sweetalert2";
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
 
 const Home = () => {
   const [exercise, setExercise] = useState([]);
@@ -29,14 +29,13 @@ const Home = () => {
 
   const tost = () => {
     Swal.fire("Good job!", "Activity Completed!", "success");
-   
   };
 
   // console.log(exercise);
   return (
     <div className="mt-6">
       <div className="flex justify-center items-center flex-wrap md:flex-wrap ms-8">
-        <div >
+        <div>
           <h1 className="text-3xl mx-11">Select today’s exercise</h1>
 
           <Items exercise={exercise} setExercise={setExercise}></Items>
@@ -47,12 +46,15 @@ const Home = () => {
             <div>
               <div className="card w-full h-full bg-base-100 shadow-xl">
                 <div className="avatar  flex justify-around">
-                  <div className="w-24 rounded ">
-                    <img src="https://placeimg.com/192/192/people" />
+                  <div className="w-24 h-24 rounded ">
+                    <img src="https://i.ibb.co/BNBtsbh/D2-A1-C270-46-E4-4788-9630-11-D6-A5-CE08-B2.jpg" />
                   </div>
                   <div>
                     <h1>Mohammad Enamul haque</h1>
-                    <p className="flex items-center gap-2 "> <Icon icon="ci:location" />  Dhaka , Bangladesh</p>
+                    <p className="flex items-center gap-2 ">
+                      {" "}
+                      <Icon icon="ci:location" /> Dhaka , Bangladesh
+                    </p>
                   </div>
                 </div>
                 <div className="card-body items-center text-center">
