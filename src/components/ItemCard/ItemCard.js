@@ -26,8 +26,8 @@ const ItemCard = ({ item,setExercise, exercise }) => {
         </figure>
         <div className="card-body ">
           <h2 className="card-title mx-auto">{name}</h2>
-          <p className="ms-0">For Age : {age}</p>
-         <p>Time required : {time}s</p>
+          <p className="text-center">For Age : {age}</p>
+         <p className="text-center">Time required : {time}s</p>
           <button onClick={addToList} className="btn glass btn-primary">Add to list</button>
          
         </div>
