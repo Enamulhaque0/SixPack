@@ -5,22 +5,12 @@ import { Icon } from "@iconify/react";
 
 const Home = () => {
   const [exercise, setExercise] = useState([]);
-  const [breakTime, setBreak] = useState(0);
 
-  const handleTen = (e) => {
-    setBreak(e.target.value);
-  };
-
-  const handleTwenty = (e) => {
-    setBreak(e.target.value);
-  };
-
-  const handleThirty = (e) => {
-    setBreak(e.target.value);
-  };
-
-  const handleForty = (e) => {
-    setBreak(e.target.value);
+  const handleClick = (id) => {
+    document.getElementById("rest").innerText =
+      document.getElementById(id).innerText;
+    const newTime = document.getElementById("rest").innerText;
+    localStorage.setItem("time", newTime);
   };
 
   const sum = exercise.reduce((accumulator, object) => {
@@ -64,42 +54,51 @@ const Home = () => {
                     <h1 className=" px-7 py-3">23yrs</h1>
                   </div>
                   <h1 className="text-1xl">Add A Break</h1>
+
                   <div className="flex justify-around gap-3 ">
                     <button
-                      onClick={handleTen}
-                      value="10"
-                      className="btn btn-xs"
+                      onClick={() => handleClick("one")}
+                      className="btn btn-xl"
                     >
-                      10s
+                      <span id="one">
+                        10<small>s</small>
+                      </span>
                     </button>
                     <button
-                      onClick={handleTwenty}
-                      value="20"
-                      className="btn btn-xs"
+                      onClick={() => handleClick("tow")}
+                      className="btn btn-xl"
                     >
-                      20s
+                      <span id="tow">
+                        20<small>s</small>
+                      </span>
                     </button>
                     <button
-                      onClick={handleThirty}
-                      value="30"
-                      className="btn btn-xs"
+                      onClick={() => handleClick("there")}
+                      className="btn btn-xl"
                     >
-                      30s
+                      <span id="there">
+                        30<small>s</small>
+                      </span>
                     </button>
                     <button
-                      onClick={handleForty}
-                      value="40"
-                      className="btn btn-xs"
+                      onClick={() => handleClick("fore")}
+                      className="btn btn-xl"
                     >
-                      40s
+                      <span id="fore">
+                        40<small>s</small>
+                      </span>
                     </button>
                   </div>
                   <h1 className="mt-8 text-1xl">Exercise Details</h1>
                   <h1 className="mt-4 bg-slate-600 p-3 rounded text-white">
                     Exercise time: {sum} seconds
                   </h1>
-                  <h1 className="mt-1 rounded bg-slate-600 p-3 text-white">
-                    Break time : {breakTime} seconds
+                  <h1 className="mt-1 rounded bg-slate-600 p-3 text-white flex">
+                    Break time :
+                    <p id="rest">
+                      {localStorage.getItem("time")}
+                      <span>s</span>
+                    </p>
                   </h1>
                   <div className="card-actions">
                     <button onClick={tost} className="btn btn-wide mt-7">
