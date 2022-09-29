@@ -33,9 +33,9 @@ const Home = () => {
   // console.log(exercise);
   return (
     <div className="mt-6">
-      <div className="flex  ms-8">
-        <div className=" text-center">
-          <h1 className="text-3xl">Select today’s exercise</h1>
+      <div className="flex justify-center items-center flex-wrap md:flex-wrap ms-8">
+        <div >
+          <h1 className="text-3xl mx-11">Select today’s exercise</h1>
 
           <Items exercise={exercise} setExercise={setExercise}></Items>
         </div>
