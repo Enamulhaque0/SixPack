@@ -61,7 +61,7 @@ const Home = () => {
                       className="btn btn-xl"
                     >
                       <span id="one">
-                        10<small>s</small>
+                        10<small>S</small>
                       </span>
                     </button>
                     <button
@@ -69,7 +69,7 @@ const Home = () => {
                       className="btn btn-xl"
                     >
                       <span id="tow">
-                        20<small>s</small>
+                        20<small>S</small>
                       </span>
                     </button>
                     <button
@@ -77,7 +77,7 @@ const Home = () => {
                       className="btn btn-xl"
                     >
                       <span id="there">
-                        30<small>s</small>
+                        30<small>S</small>
                       </span>
                     </button>
                     <button
@@ -85,7 +85,7 @@ const Home = () => {
                       className="btn btn-xl"
                     >
                       <span id="fore">
-                        40<small>s</small>
+                        40<small>S</small>
                       </span>
                     </button>
                   </div>
@@ -97,7 +97,7 @@ const Home = () => {
                     Break time :
                     <p id="rest">
                       {localStorage.getItem("time")}
-                      <span>s</span>
+                      <span></span>
                     </p>
                   </h1>
                   <div className="card-actions">
